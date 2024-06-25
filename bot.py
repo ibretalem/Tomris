@@ -40,7 +40,7 @@ async def start(event):
 #help
 @client.on(events.NewMessage(pattern="^/help$"))
 async def help(event):
-  helptext = "**Tomris Yardım Menüsü\n\nCommand: /all \n BU KOMUTLA BAŞKALARINA SÖYLEMEK İSTEDİĞİNİZ KELİMELERDE KULLANABİLİRSİNİZ. \n`ÖRNEK: /all MERHABALAR GÜNAYDIN.` \nHERHANGİ BİR YANITLADIĞIZ MESAJI KULLANICILARA İLETİCEK."
+  helptext = "**Tomris Yardım Menüsü\n\nCommand: /all \n BU KOMUTLA KELİME YAZARAK ETİKETLEYEBİLİRSİN.\n/all SELAM👋n\/cancel BU KOMUTLA SONLANDIRILIR."
   await event.reply(helptext,
                     buttons=(
                       [
