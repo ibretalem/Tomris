@@ -24,7 +24,7 @@ moment_worker = []
 #start
 @client.on(events.NewMessage(pattern="^/start$"))
 async def start(event):
-  await event.reply("^_^ Hey, Welcome To TAG Help Bot's Menu\nI can tag 15,000 Members in Group and 300 Members In Channel.\nNeed Help /help ",
+  await event.reply("^_^ SELAM🤝 BEN GELİŞMEKTE OLAN BİR ETİKET BOTUYUM. BENİ GRUBUNA EKLEMEYİ UNUTMA. ",
                     buttons=(
                       [
                          Button.url('DESTEK ⚙️', 'https://t.me/knsybots'), 
