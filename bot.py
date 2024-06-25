@@ -63,13 +63,13 @@ async def help(event):
 async def mentionall(event):
   global moment_worker
   if event.is_private:
-    return await event.respond("Use This In Channel or Group!")
+    return await event.respond("BUNU KANAL VEYA GRUBTA KULLAN.!")
   
   admins = []
   async for admin in client.iter_participants(event.chat_id, filter=ChannelParticipantsAdmins):
     admins.append(admin.id)
   if not event.sender_id in admins:
-    return await event.respond("Only Admin can use it.")
+    return await event.respond("KULLANMAK İÇİN YÖNETİCİ OLMALISIN.!")
   
   if event.pattern_match.group(1):
     mode = "text_on_cmd"
@@ -78,11 +78,11 @@ async def mentionall(event):
     mode = "text_on_reply"
     msg = event.reply_to_msg_id
     if msg == None:
-        return await event.respond("I can't Mention Members for Old Post!")
+        return await event.respond("GEÇMİŞ GÖNDERİDEKİ ÜYELERDEN BASSETMİYORUM.!")
   elif event.pattern_match.group(1) and event.reply_to_msg_id:
-    return await event.respond("Give me can an Argument. Ex: `/tag Hey, Where are you`")
+    return await event.respond("BANA BİR ARGÜMAN VER . ÖRNEK: `/tag SELAM ARKADAŞLAR.`")
   else:
-    return await event.respond("Reply to Message or Give Some Text To Mention!")
+    return await event.respond("MESAJI YANITLAYIN VE BASSETMEK İÇİN BİR METİN VERİN.!")
     
   if mode == "text_on_cmd":
     moment_worker.append(event.chat_id)
@@ -124,7 +124,7 @@ async def mentionall(event):
 async def telegraph(client, message):
     replied = message.reply_to_message
     if not replied:
-        await message.reply("Reply to a supported media file")
+        await message.reply("Desteklenen Bir Medya Dosysı Yanıtla.")
         return
     if not (
         (replied.photo and replied.photo.file_size <= 5242880)
@@ -142,7 +142,7 @@ async def telegraph(client, message):
             and replied.document.file_size <= 5242880
         )
     ):
-        await message.reply("Not supported!")
+        await message.reply("DESTEKLENMİYOR 🙁")
         return
     download_location = await client.download_media(
         message=message.reply_to_message,
@@ -162,6 +162,6 @@ async def telegraph(client, message):
 
 
 
-print("Started Successfully Join Support")
+print("BOT ÇALIYOR ✔️ -DESTEĞE KATILIN")
 print("¯\_(ツ)_/¯ YARDIM İÇİN  @knsybots")
 client.run_until_disconnected()
