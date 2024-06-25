@@ -24,7 +24,7 @@ moment_worker = []
 #start
 @client.on(events.NewMessage(pattern="^/start$"))
 async def start(event):
-  await event.reply("^_^ SELAM🤝 BEN GELİŞMEKTE OLAN BİR ETİKET BOTUYUM. BENİ GRUBUNA EKLEMEYİ UNUTMA. ",
+  await event.reply("^_^ SELAM🤝 BEN GELİŞMEKTE OLAN BİR ETİKET BOTUYUM. n\ BENİ GRUBUNA EKLEMEYİ UNUTMA. ",
                     buttons=(
                       [
                          Button.url('DESTEK ⚙️', 'https://t.me/knsybots'), 
@@ -40,7 +40,7 @@ async def start(event):
 #help
 @client.on(events.NewMessage(pattern="^/help$"))
 async def help(event):
-  helptext = "**Tomris Yardım Menüsü\n\nCommand: /all \n BU KOMUTLA KELİME YAZARAK ETİKETLEYEBİLİRSİN.\n/all SELAM👋n\/cancel BU KOMUTLA SONLANDIRILIR."
+  helptext = "Tomris Yardım Menüsü\n\nKOMUTLAR: \n /all : BU KOMUTLA KELİME YAZARAK ETİKETLEYEBİLİRSİN. \n /all SELAM👋 n\ /cancel : BU KOMUTLA SONLANDIRILIR."
   await event.reply(helptext,
                     buttons=(
                       [
