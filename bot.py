@@ -24,7 +24,7 @@ moment_worker = []
 #start
 @client.on(events.NewMessage(pattern="^/start$"))
 async def start(event):
-  await event.reply("^_^ SELAM🤝 BEN GELİŞMEKTE OLAN BİR ETİKET BOTUYUM. n\ BENİ GRUBUNA EKLEMEYİ UNUTMA. ",
+  await event.reply("^_^ SELAM🤝 BEN GELİŞMEKTE OLAN BİR ETİKET BOTUYUM. \n BENİ GRUBUNA EKLEMEYİ UNUTMA. ",
                     buttons=(
                       [
                          Button.url('DESTEK ⚙️', 'https://t.me/knsybots'), 
