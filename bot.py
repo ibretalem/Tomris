@@ -27,11 +27,11 @@ async def start(event):
   await event.reply("^_^ Hey, Welcome To TAG Help Bot's Menu\nI can tag 15,000 Members in Group and 300 Members In Channel.\nNeed Help /help ",
                     buttons=(
                       [
-                         Button.url('📣 UPDATES', 'https://t.me/DeeCodeBots'), 
-                         Button.url('⭐SUPPORT', 'https://t.me/DeCodeSupport'), 
+                         Button.url('DESTEK ⚙️', 'https://t.me/knsybots'), 
+                         Button.url('GELİŞTİRİCİ 📿', 'https://t.me/bykonsey'), 
                       ], 
                       [
-                        Button.url('➕ ADD ME TO YOUR GROUP', 'https://t.me/MEMBER_TAGERBOT?startgroup=true'),   
+                        Button.url('» BENİ GRUBA EKLE «', 'https://t.me/TomrisTaggerBot?startgroup=true'),   
                       ]
                    ), 
                     link_preview=False
@@ -40,15 +40,15 @@ async def start(event):
 #help
 @client.on(events.NewMessage(pattern="^/help$"))
 async def help(event):
-  helptext = "**Tag Help Bot's Help Menu**\n\nCommand: /all \n You can use this command with text you want to tell others. \n`Example: /all Good morning!` \nYou can use this command as an answer. any message Bot will tag users to replied message"
+  helptext = "**Tomris Yardım Menüsü\n\nCommand: /all \n BU KOMUTLA BAŞKALARINA SÖYLEMEK İSTEDİĞİNİZ KELİMELERDE KULLANABİLİRSİNİZ. \n`ÖRNEK: /all MERHABALAR GÜNAYDIN.` \nHERHANGİ BİR YANITLADIĞIZ MESAJI KULLANICILARA İLETİCEK."
   await event.reply(helptext,
                     buttons=(
                       [
-                         Button.url('📣 UPDATES', 'https://t.me/DeeCodeBots'), 
-                         Button.url('⭐SUPPORT', 'https://t.me/DeCodeSupport'), 
+                         Button.url('DESTEK ⚙️', 'https://t.me/knsybots'), 
+                         Button.url('GELİŞTİRİCİ 📿', 'https://t.me/bykonsey'), 
                       ], 
                       [
-                        Button.url('➕ ADD ME TO YOUR GROUP', 'https://t.me/MEMBER_TAGERBOT?startgroup=true'),   
+                        Button.url('» BENİ GRUBA EKLE «', 'https://t.me/TomrisTaggerBot?startgroup=true'),   
                       ]
                    ), 
                     link_preview=False
@@ -163,5 +163,5 @@ async def telegraph(client, message):
 
 
 print("Started Successfully Join Support")
-print("¯\_(ツ)_/¯ Need Help Join @DeCodeSupport")
+print("¯\_(ツ)_/¯ YARDIM İÇİN  @knsybots")
 client.run_until_disconnected()
